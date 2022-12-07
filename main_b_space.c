@@ -3,6 +3,7 @@
 #include <time.h>
 #define TRUE 1
 
+#include "utils/utils.h"
 #include "mylib/mylib.h"
 
 int main(int argc, char *argv[])
@@ -20,7 +21,7 @@ int main(int argc, char *argv[])
 
   while (TRUE)
   {
-    multiply_vector_matrix(matrix, vector, vector_result, N);
+    matVecMult(matrix, vector, vector_result, N);
   }
 
   return 0;

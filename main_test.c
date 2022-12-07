@@ -3,9 +3,6 @@
 
 int main()
 {
-  int T = 4;
-  int N = 3;
-
   int matrix_input_test_case[4][9] = {
     {1, 2, 3, 4, 5, 6, 7, 8, 9},
     {2, 1, 5, 1, 5, 3, 2, 4, 2},
@@ -26,6 +23,9 @@ int main()
     {34, 27, 21},
     {11, 9, 12},
   };
+
+  int N = 3;
+  int T = 4;
 
   int i;
   for (i = 0; i < T; i++)

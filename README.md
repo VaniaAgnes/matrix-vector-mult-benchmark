@@ -6,7 +6,7 @@ Analyzing vector matrix multiplication. The operating system used for this bench
 
 Command to compile the `main_test.c` file
 ```
-gcc -o main_test.exe main_test.c mylib/mylib.c
+gcc -o main_test.exe main_test.c utils/utils.c mylib/mylib.c
 ```
 
 Command to run the program (on windows):
@@ -37,13 +37,13 @@ Actual V[1] = 9 ; Expected V[1] = 9
 Actual V[2] = 12; Expected V[2] = 12
 ```
 
-What the code does is just simply testing the `multiply_vector_matrix()` function with some of the input matrix and vector that has been provided as the test cases then compare the result produce by that function with the expected result. If it's the same, then we can considered that the function works correctly.
+What the code does is just simply testing the `matVecMult()` function with some of the input matrix and vector that has been provided as the test cases then compare the result produce by that function with the expected result. If it's the same, then we can considered that the function works correctly.
 
 ## Exploring Time Complexity
 
 Command to compile the `main_b_time.c` file
 ```
-gcc -o main_b_time.exe main_b_time.c mylib/mylib.c
+gcc -o main_b_time.exe main_b_time.c utils/utils.c mylib/mylib.c
 ```
 
 Command to run the program (on windows):
@@ -73,7 +73,7 @@ Here is the graph showing the the amount of time needed as the N size goes highe
 
 Command to compile the `main_b_space.c` file
 ```
-gcc -o main_b_space.exe main_b_space.c mylib/mylib.c
+gcc -o main_b_space.exe main_b_space.c utils/utils.c mylib/mylib.c
 ```
 
 Command to run the program (on windows):

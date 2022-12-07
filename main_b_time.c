@@ -2,6 +2,7 @@
 #include <stdlib.h>
 #include <time.h>
 
+#include "utils/utils.h"
 #include "mylib/mylib.h"
 
 int main(int argc, char *argv[])
@@ -19,11 +20,11 @@ int main(int argc, char *argv[])
 
   float startTime = (float)clock() / CLOCKS_PER_SEC;
 
-  multiply_vector_matrix(matrix, vector, vector_result, N);
+  matVecMult(matrix, vector, vector_result, N);
 
   float endTime = (float)clock() / CLOCKS_PER_SEC;
 
-  printf("Function: multiply_vector_matrix, time elapsed: %f ms\n", 1000 * (endTime - startTime));
+  printf("Function: matVecMult, time elapsed: %f ms\n", 1000 * (endTime - startTime));
 
   return 0;
 }
