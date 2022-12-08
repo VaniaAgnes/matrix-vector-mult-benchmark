@@ -11,7 +11,7 @@ gcc -o main_test.exe main_test.c utils/utils.c mylib/mylib.c
 
 Command to run the program (on windows):
 ```
-main_text.exe
+main_test.exe
 ```
 
 If you run it correctly, this will be the output:
