@@ -1,17 +1,18 @@
-main:
-	gcc -o main_test.exe main_test.c utils/utils.c mylib/mylib.c
-    main_test.exe
+main: mylib.o utils.o
+	gcc -o main_test.out main_test.c mylib/mylib.o utils/utils.o
 
-time:
-	gcc -o main_b_time.exe main_b_time.c utils/utils.c mylib/mylib.c
-	main_b_time.exe <integer>
-#example: main_b_time.exe 10000
+time: mylib.o utils.o
+	gcc -o main_b_time.out main_b_time.c mylib/mylib.o utils/utils.o
 
-space:
-	gcc -o main_b_space.exe main_b_space.c utils/utils.c mylib/mylib.c
-	main_b_space.exe <integer>
-#example:main_b_space.exe 10000
+space: mylib.o utils.o
+	gcc -o main_b_space.out main_b_space.c mylib/mylib.o utils/utils.o
 
-clean:
+mylib.o:
+	gcc -o mylib/mylib.o -c mylib/mylib.c
+
+utils.o:
+	gcc -o utils/utils.o -c utils/utils.c
+
+clear:
 	rm -f *.o
 	rm -f *.out
